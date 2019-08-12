@@ -11,7 +11,8 @@ function getDogPictures(numberOfDogs) {
     let fetchUrl = "https://dog.ceo/api/breeds/image/random/" + numberOfDogs;
     fetch(fetchUrl)
         .then(response => response.json())
-        .then(jsonResponse => logResults(jsonResponse));
+        .then(jsonResponse => logResults(jsonResponse))
+        .catch(error => alert("something's wrong!"));
 }
 
 function howManyPictures() {
